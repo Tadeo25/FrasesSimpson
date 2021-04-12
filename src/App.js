@@ -22,9 +22,12 @@ function App() {
     const resultado = await respuesta.json();
     console.log(respuesta);
     console.log(resultado[0]);
+
+    setTimeout(()=>{
+      setPersonaje(resultado[0])
+      setCargando(false);
+    },2500);
     //guardar objeto dentro del state
-    setPersonaje(resultado[0])
-    setCargando(false);
   }
   //Operador terniario (condicion) ? (lo q quiero hacer si la condicion es true) : (lo q quiero hacer si es false)
      
